@@ -1,6 +1,6 @@
 FROM openjdk:21-slim AS build
 COPY . .
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package
 #
 FROM eclipse-temurin:21-jre-jammy
 COPY --from=build /target/*.jar app.jar
