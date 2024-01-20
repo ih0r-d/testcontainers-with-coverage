@@ -47,7 +47,7 @@ public class ApplianceRestController {
                 .body(mapper.to(appliance));
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> removeById(@PathVariable long id){
         service.remove(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
