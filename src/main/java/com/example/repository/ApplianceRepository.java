@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface ApplianceRepository extends JpaRepository<Appliance, Long> {
 
     @Query(value = """
-             update appliances set amount = amount +1 where id = :id
+             update appliances set amount = amount + 1 where id = :id
             """, nativeQuery = true)
     @Modifying
     void updateApplianceAmountById(@Param("id") long id);

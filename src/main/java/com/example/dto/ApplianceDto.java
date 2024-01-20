@@ -16,7 +16,8 @@ public class ApplianceDto {
 
     private Long id;
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private Long amount;
+    private int amount;
+
     @NotNull(message = "Brand cannot be left blank")
     @Length(min = 1,max = 256,message = "Brand length must be between {min} and {max} values")
     private String brand;

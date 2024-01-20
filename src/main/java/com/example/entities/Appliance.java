@@ -18,7 +18,7 @@ public class Appliance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long amount;
+    private int amount;
     private String brand;
     private String equipment;
 }
